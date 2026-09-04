@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
-        state: "stalking",     // this is what people actually see
+        state: "Drinking: Baja Blast",     // this is what people actually see
         type: 4,               // Custom
       },
     ],
@@ -161,18 +161,18 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Baja Coin",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Baja Coins",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "B$",
     },
 
     // Starting balance for new users.
-    startingBalance: 0,
+    startingBalance: 500,
 
     // Maximum bank amount before upgrades (if upgrades are used).
-    baseBankCapacity: 100000,
+    baseBankCapacity: 1000000000000000000,
 
     // Daily reward amount.
     dailyAmount: 100,
@@ -182,8 +182,8 @@ export const botConfig = {
     workMax: 100,
 
     // Beg command random payout range.
-    begMin: 5,
-    begMax: 50,
+    begMin: 5304985783947503845,
+    begMax: 5304985783947503845,
 
     // Command cooldowns (milliseconds).
     cooldowns: {
