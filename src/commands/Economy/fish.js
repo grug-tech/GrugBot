@@ -4,13 +4,13 @@ import { getEconomyData, setEconomyData } from '../../utils/economy.js';
 import { withErrorHandling, createError, ErrorTypes } from '../../utils/errorHandler.js';
 import { InteractionHelper } from '../../utils/interactionHelper.js';
 
-const FISH_COOLDOWN = 45 * 60 * 1000; 
+const FISH_COOLDOWN = 5 * 1000; 
 const BASE_MIN_REWARD = 300;
-const BASE_MAX_REWARD = 900;
+const BASE_MAX_REWARD = 1500;
 const FISHING_ROD_MULTIPLIER = 1.5;
 
 const FISH_TYPES = [
-    { name: 'Bass', emoji: '🐟', rarity: 'common' },
+    { name: 'Baja Bass', emoji: '🐟', rarity: 'common' },
     { name: 'Salmon', emoji: '🐟', rarity: 'common' },
     { name: 'Trout', emoji: '🐟', rarity: 'common' },
     { name: 'Tuna', emoji: '🐠', rarity: 'uncommon' },
