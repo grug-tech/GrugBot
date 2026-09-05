@@ -60,7 +60,7 @@ export default {
             })
                 .addFields(
                     {
-                        name: "💵 Cash",
+                        name: "💵 Baja Coin's",
                         value: `$${wallet.toLocaleString()}`,
                         inline: true,
                     },
