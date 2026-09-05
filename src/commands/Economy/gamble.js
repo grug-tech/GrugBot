@@ -4,7 +4,7 @@ import { getEconomyData, setEconomyData } from '../../utils/economy.js';
 import { withErrorHandling, createError, ErrorTypes } from '../../utils/errorHandler.js';
 import { InteractionHelper } from '../../utils/interactionHelper.js';
 
-const BASE_WIN_CHANCE = 0.4;
+const BASE_WIN_CHANCE = 0.5;
 const CLOVER_WIN_BONUS = 0.1;
 const CHARM_WIN_BONUS = 0.08;
 const PAYOUT_MULTIPLIER = 2.0;
@@ -51,7 +51,7 @@ export default {
 
             if (userData.wallet < betAmount) {
                 throw createError(
-                    "Insufficient cash for gamble",
+                    "dude... ur fucking broke",
                     ErrorTypes.VALIDATION,
                     `You only have $${userData.wallet.toLocaleString()} cash, but you are trying to bet $${betAmount.toLocaleString()}.`,
                     { required: betAmount, current: userData.wallet }
@@ -87,15 +87,15 @@ export default {
                 cashChange = amountWon - betAmount;
 
                 resultEmbed = successEmbed(
-                    "🎉 You Won!",
+                    "🎉 YOU FUCKIGN WONN....LET IT RIDEEEEE",
                     `You successfully gambled and turned your **$${betAmount.toLocaleString()}** bet into **$${amountWon.toLocaleString()}**!${cloverMessage}`,
                 );
             } else {
 cashChange = -betAmount;
 
                 resultEmbed = warningEmbed(
-                    "💔 You Lost...",
-                    `The dice rolled against you. You lost your **$${betAmount.toLocaleString()}** bet.`,
+                    "💔 You Fucking Lost...",
+                    `The dice rolled against you my nigga. You lost your **$${betAmount.toLocaleString()}** bet.`,
                 );
             }
 
@@ -107,7 +107,7 @@ userData.lastGamble = now;
             const newCash = userData.wallet;
 
             resultEmbed.addFields({
-                name: "New Cash Balance",
+                name: "New Baja Balance",
                 value: `$${newCash.toLocaleString()}`,
                 inline: true,
             });
@@ -122,7 +122,7 @@ userData.lastGamble = now;
                 });
             } else {
                 resultEmbed.setFooter({
-                    text: `Next gamble available in 5 minutes. Base win chance: ${Math.round(BASE_WIN_CHANCE * 100)}%.`,
+                    text: `Next gamble available in 5 seconds. Base win chance: ${Math.round(BASE_WIN_CHANCE * 100)}%.`,
                 });
             }
 
